@@ -1,4 +1,4 @@
-Pipeline {
+pipeline {
   agent {
     docker {
       image 'docker:dind'
@@ -23,7 +23,7 @@ Pipeline {
     stage('SonarQube Analysis') {
       steps {
         script {
-            def scannerHome = tool 'sonarscanner'
+            def scannerHome = tool 'SonarScanner'
             withSonarQubeEnv('sonarqube') {
                 sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=my-ec2-project -Dsonar.sources=src/"
             }
