@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: static-website
-        image: dassaran504/static-website:replaceImageTag
+        image: sarandash2003-dotcom/static-website:7
         ports:
         - containerPort: 80
         resources:
